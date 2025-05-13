@@ -10,8 +10,9 @@ interface Props extends HTMLAttributes<"div"> {
 const { iconProps, textProps, class: className, ...divProps } = Astro.props;
 ---
 
-<div {...divProps} class={cn("antialiased flex items-center gap-2 font-logo font-bold", className)}>
+<div {...divProps} class={cn("flex items-center gap-2 font-logo font-bold", className)}>
     <span {...textProps} class={cn("text-8xl", textProps?.class)}
-        ><span class="font-syncopate">Zeit</span>365</span
+        ><span class="font-syncopate text-shadow-base-200 text-shadow text-shadow-2xs">Zeit</span
+        >365</span
     >
 </div>
