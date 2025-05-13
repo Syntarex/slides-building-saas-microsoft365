@@ -1,0 +1,17 @@
+---
+import { cn } from "@/ui/utils/cn";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {
+    iconProps?: HTMLAttributes<"span">;
+    textProps?: HTMLAttributes<"span">;
+}
+
+const { iconProps, textProps, class: className, ...divProps } = Astro.props;
+---
+
+<div {...divProps} class={cn("antialiased flex items-center gap-2 font-logo font-bold", className)}>
+    <span {...iconProps} class={cn("iconify fluent--clock-32-regular size-7 ", iconProps?.class)}
+    ></span>
+    <span {...textProps} class={cn("text-3xl", textProps?.class)}>Zeit365</span>
+</div>

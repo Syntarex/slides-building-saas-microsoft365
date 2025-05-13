@@ -1,0 +1,18 @@
+@import "./segoe-font.css";
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@plugin "@iconify/tailwind4" {
+    prefixes: fluent;
+}
+
+@theme {
+    --font-body:
+        "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont,
+        "Helvetica Neue", sans-serif;
+}
+
+body {
+    @apply font-body;
+}
