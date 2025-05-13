@@ -11,7 +11,7 @@ const { iconProps, textProps, class: className, ...divProps } = Astro.props;
 ---
 
 <div {...divProps} class={cn("antialiased flex items-center gap-2 font-logo font-bold", className)}>
-    <span {...iconProps} class={cn("iconify fluent--clock-32-regular size-7 ", iconProps?.class)}
-    ></span>
-    <span {...textProps} class={cn("text-3xl", textProps?.class)}>Zeit365</span>
+    <span {...textProps} class={cn("text-8xl", textProps?.class)}
+        ><span class="font-syncopate">Zeit</span>365</span
+    >
 </div>
